@@ -16,7 +16,7 @@ describe Artist do
   end
   #Associations(shoulda)
   it {should have_many :artworks}
-  it {should has_one :style}
+  it {should belong_to :style}
 
   #methods (factory girl)
 end
