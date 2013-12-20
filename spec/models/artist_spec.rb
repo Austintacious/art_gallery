@@ -1,11 +1,9 @@
 require 'spec_helper'
 
 describe Artist do
-  let(:blanks) {['', nil]}
-  let(:invalid_emails) {['blah.com', '@blah.com', '@@.com', 'blah@.com', 'blah', '@@blah.com', 'com', '.com']}
+  let(:invalid_emails) {['blah.com', '@blah.com', '@@.com', 'blah@.com', 'blah', '@@blah.com', 'com', '.com', '', nil]}
   #Validations(valid_attribute)
   it {should have_valid(:email).when('blah@blah.com')}
-  it {should_not have_valid(:email).when(*blanks)}
   it {should_not have_valid(:email).when(*invalid_emails)}
 
   it 'should be unique' do
