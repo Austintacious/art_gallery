@@ -22,4 +22,6 @@ describe Artwork do
   it {should belong_to :artist}
   it {should belong_to :medium}
   it {should belong_to :sale}
+  it {should have_many :artcollections}
+  it {should have_many :collections}
 end
