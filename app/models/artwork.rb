@@ -4,4 +4,5 @@ class Artwork < ActiveRecord::Base
   validates_uniqueness_of :name, scope: :artist_id
   belongs_to :artist
   belongs_to :medium
+  belongs_to :sale
 end

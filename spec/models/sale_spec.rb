@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Sales do
+describe Sale do
   let(:invalid_customer_ids) {['', nil, "abc", "12abc34", "ab123cd"]}
   let(:invalid_dates) {['blah', '', nil, '100', '100-0-0', '0000-00-00']}
   it {should have_valid(:customer_id).when(1)}
